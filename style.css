@@ -180,15 +180,11 @@ a { color: inherit; text-decoration: none; }
 
 /* つよさ */
 .str { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--text-sub); }
-.dots { display: inline-flex; gap: 3px; }
-.dots i {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--text);
-  display: block;
-}
-.dots i.off { background: var(--border); }
+.stars { display: inline-flex; gap: 3px; font-size: 11px; line-height: 1; }
+.stars i { color: var(--text); }
+.stars i.fa-regular { color: #c9c9c9; }
 .reco .str { font-size: 12px; margin-top: 10px; }
+.reco .stars { font-size: 12px; }
 
 /* フォルダ一覧 */
 .folders-head {
@@ -249,6 +245,7 @@ a { color: inherit; text-decoration: none; }
 .facts .k { flex: 0 0 84px; color: var(--text-sub); font-size: 12px; }
 .facts .v { flex: 1; }
 .facts .v .str { font-size: 13px; color: var(--text); }
+.facts .v .stars { font-size: 13px; }
 
 /* 12週の流れ */
 .weeks { margin-top: 44px; }
