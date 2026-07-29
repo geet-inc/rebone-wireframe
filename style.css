@@ -42,9 +42,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
 }
 
-.sec { padding: 0 20px; margin-top: 48px; }
+.sec { padding: 0 20px; margin-top: 44px; }
 .sec-title { font-size: 16px; font-weight: 500; line-height: 1.6; }
-.sec-note { font-size: 12px; color: var(--text-sub); margin-top: 4px; }
+.sec-note { font-size: 12px; color: var(--text-sub); margin-top: 4px; line-height: 1.8; }
 .link-min { font-size: 12px; color: var(--text-sub); }
 .chev { font-size: 9px; }
 
@@ -72,46 +72,6 @@ a { color: inherit; text-decoration: none; }
 .head-back i { font-size: 14px; color: var(--text-sub); }
 .head-back span { font-size: 14px; font-weight: 500; }
 
-/* ---------- プログラムバー ---------- */
-.program {
-  padding: 14px 20px;
-  background: var(--panel);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-.program .name { font-size: 12px; line-height: 1.6; }
-.program .name strong { font-weight: 500; }
-.program .name span { color: var(--text-sub); }
-.program .rebuild { flex: 0 0 auto; font-size: 12px; color: var(--text-sub); white-space: nowrap; }
-
-/* ---------- 今週のスイッチ ---------- */
-.week { padding: 40px 20px 0; }
-.week .wlead { font-size: 13px; color: var(--text-sub); }
-.week h2 { font-size: 28px; font-weight: 700; line-height: 1.45; margin-top: 6px; }
-.week .wnote { font-size: 12px; color: var(--text-sub); margin-top: 10px; line-height: 1.8; }
-
-.lead-card { margin-top: 24px; }
-.lead-card .ph { aspect-ratio: 16 / 10; }
-.lead-card .t { font-size: 18px; font-weight: 500; line-height: 1.6; margin-top: 14px; }
-.lead-card .m { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
-
-.wlist { margin-top: 30px; }
-.wlist li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-.wlist li:first-child { border-top: 1px solid var(--border); }
-.wlist .ph { flex: 0 0 86px; aspect-ratio: 16 / 10; }
-.wlist .b { flex: 1; }
-.wlist .t { font-size: 14px; line-height: 1.6; }
-.wlist .m { font-size: 11px; color: var(--text-sub); margin-top: 2px; }
-.wlist .c { flex: 0 0 auto; font-size: 11px; color: var(--text-sub); }
-
 /* ---------- ボタン ---------- */
 .btn {
   display: flex;
@@ -127,23 +87,123 @@ a { color: inherit; text-decoration: none; }
   border-radius: 3px;
 }
 .btn i { font-size: 12px; }
+.btn-line {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--text);
+  height: 48px;
+  font-size: 14px;
+}
 
-/* ---------- 横スクロール ---------- */
-.rail { display: flex; gap: 12px; margin-top: 16px; overflow-x: auto; padding: 0 20px; }
-.rail::-webkit-scrollbar { display: none; }
-.card { flex: 0 0 132px; }
-.card .ph { aspect-ratio: 16 / 10; }
-.card p { font-size: 12px; line-height: 1.6; margin-top: 8px; }
-.card .sub { color: var(--text-sub); font-size: 11px; margin-top: 2px; }
-.sec-full { margin-top: 48px; }
-.sec-full .sec-head { padding: 0 20px; }
+/* ================================================
+   今月のテーマ（全員おなじ・上部の帯）
+   ================================================ */
+.theme { padding: 18px 20px 20px; background: var(--panel); }
+.theme .kicker { font-size: 11px; color: var(--text-sub); }
+.theme h2 { font-size: 18px; font-weight: 700; line-height: 1.5; margin-top: 3px; }
+.theme .desc { font-size: 12px; color: var(--text-sub); margin-top: 8px; line-height: 1.85; }
+.theme .sub {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+}
+.theme .sub b { font-weight: 500; }
+.theme .sub .link-min { flex: 0 0 auto; white-space: nowrap; }
 
-/* ---------- 積み上げ ---------- */
+/* ================================================
+   今日の1本（主役）
+   ================================================ */
+.today { padding: 40px 20px 0; }
+.today .tlead { font-size: 13px; color: var(--text-sub); }
+.today .ph { aspect-ratio: 16 / 10; margin-top: 14px; }
+.today h2 { font-size: 24px; font-weight: 700; line-height: 1.45; margin-top: 16px; }
+.today .meta { font-size: 12px; color: var(--text-sub); margin-top: 6px; }
+.today .note { font-size: 12px; color: var(--text-sub); margin-top: 14px; line-height: 1.85; }
+
+/* ================================================
+   今週のスケジュール（7マス）
+   ================================================ */
+.sched-wrap { padding: 0 20px; margin-top: 44px; }
+.sched { margin: 16px -10px 0; }
+.sched li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.sched li:first-child { border-top: 1px solid var(--border); }
+
+.sched .day { flex: 0 0 36px; display: flex; align-items: baseline; gap: 5px; }
+.sched .day b { font-size: 13px; font-weight: 500; }
+.sched .day span { font-size: 11px; color: var(--text-sub); }
+.sched .num { flex: 0 0 28px; font-size: 12px; color: var(--text-sub); text-align: center; }
+.sched .body { flex: 1; min-width: 0; }
+.sched .t { display: block; font-size: 13px; line-height: 1.6; }
+.sched .m { display: block; font-size: 11px; color: var(--text-sub); line-height: 1.6; }
+.sched .hidden { display: block; height: 9px; width: 64%; background: var(--placeholder-bg); }
+.sched .st { flex: 0 0 auto; font-size: 11px; color: var(--text-sub); }
+.sched .st i { font-size: 11px; color: var(--text); }
+
+.sched li.is-done .t { color: var(--text-sub); }
+.sched li.is-now { background: var(--panel); }
+.sched li.is-now .t { font-weight: 700; }
+.sched li.is-now .st { color: var(--text); font-weight: 500; }
+
+/* ================================================
+   Switch Lab（並走する下地づくり）
+   ================================================ */
+.lab { padding: 0 20px; margin-top: 44px; }
+.lab .box { border: 1px solid var(--border); border-radius: 3px; padding: 16px 18px 18px; }
+.lab .top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.lab .t { font-size: 13px; font-weight: 500; }
+.lab .c { flex: 0 0 auto; font-size: 11px; color: var(--text-sub); }
+.lab .bar { height: 4px; background: var(--panel); margin-top: 13px; overflow: hidden; }
+.lab .bar span { display: block; height: 100%; background: var(--text); }
+.lab .d { font-size: 11px; color: var(--text-sub); margin-top: 11px; line-height: 1.75; }
+.lab .btn-line { height: 44px; font-size: 13px; margin-top: 14px; }
+
+/* ================================================
+   ライブレッスン
+   ================================================ */
+.live { margin-top: 16px; display: flex; gap: 14px; align-items: center; }
+.live .ph { flex: 0 0 120px; aspect-ratio: 16 / 10; }
+.live .t { font-size: 13px; line-height: 1.6; }
+.live .d { font-size: 11px; color: var(--text-sub); margin-top: 4px; }
+
+.arch { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 16px; }
+.arch div {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+/* ライブ当日：最上部に昇格するブロック */
+.live-now { padding: 0 20px; margin-top: 32px; }
+.live-now .box { border: 1px solid var(--text); border-radius: 3px; overflow: hidden; }
+.live-now .ph { aspect-ratio: 16 / 9; }
+.live-now .body { padding: 18px 18px 20px; }
+.live-now .kicker { font-size: 11px; color: var(--text-sub); }
+.live-now h2 { font-size: 20px; font-weight: 700; line-height: 1.5; margin-top: 5px; }
+.live-now .when { font-size: 13px; margin-top: 8px; }
+.live-now .note { font-size: 12px; color: var(--text-sub); margin-top: 10px; line-height: 1.85; }
+
+/* ================================================
+   積み上げ
+   ================================================ */
 .stack { margin-top: 16px; background: var(--panel); padding: 22px 20px; }
-.stack ul { display: flex; gap: 28px; }
+.stack ul { display: flex; gap: 32px; }
 .stack .num { font-size: 26px; font-weight: 700; line-height: 1.3; }
 .stack .lbl { font-size: 11px; color: var(--text-sub); }
-.stack .season {
+.stack .more {
   margin-top: 18px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
@@ -151,15 +211,11 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   font-size: 12px;
 }
-.stack .season span { color: var(--text-sub); }
+.stack .more span { color: var(--text-sub); }
 
-/* ---------- ライブ ---------- */
-.live { margin-top: 16px; display: flex; gap: 14px; align-items: center; }
-.live .ph { flex: 0 0 120px; aspect-ratio: 16 / 10; }
-.live .t { font-size: 13px; line-height: 1.6; }
-.live .d { font-size: 11px; color: var(--text-sub); margin-top: 4px; }
-
-/* ---------- さがす ---------- */
+/* ================================================
+   さがす／お守り
+   ================================================ */
 .find { display: flex; gap: 10px; margin-top: 16px; }
 .find div {
   flex: 1;
@@ -171,40 +227,40 @@ a { color: inherit; text-decoration: none; }
 }
 .find i { display: block; font-size: 15px; color: var(--text-sub); margin-bottom: 8px; }
 
-/* ---------- ボトムナビ ---------- */
+.amulet { padding: 0 20px; margin-top: 40px; }
+.amulet .box {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.amulet .t { font-size: 13px; }
+.amulet .d { font-size: 11px; color: var(--text-sub); margin-top: 2px; }
+.amulet i.lead { font-size: 15px; color: var(--text-sub); }
+
+/* ================================================
+   ボトムナビ
+   ================================================ */
 .nav { display: flex; border-top: 1px solid var(--border); margin-top: 56px; }
 .nav div { flex: 1; text-align: center; padding: 12px 0 14px; font-size: 10px; color: var(--text-sub); }
 .nav i { display: block; font-size: 16px; margin-bottom: 5px; }
 .nav .on { color: var(--text); }
 
 /* ================================================
-   プログラムをえらぶ（フォルダビュー）
+   これまでのテーマ（一覧）
    ================================================ */
+.now-theme { padding: 0 20px; margin-top: 36px; }
+.now-theme .label { font-size: 12px; color: var(--text-sub); }
+.now-theme .box { display: block; margin-top: 12px; border: 1px solid var(--text); border-radius: 3px; overflow: hidden; }
+.now-theme .ph { aspect-ratio: 16 / 9; }
+.now-theme .body { padding: 18px 18px 20px; }
+.now-theme h2 { font-size: 20px; font-weight: 700; line-height: 1.5; }
+.now-theme .desc { font-size: 12px; color: var(--text-sub); margin-top: 8px; line-height: 1.85; }
+.now-theme .spec { font-size: 12px; color: var(--text-sub); margin-top: 14px; }
 
-.done-note { padding: 22px 20px; background: var(--panel); }
-.done-note .t { font-size: 13px; font-weight: 500; }
-.done-note .d { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
-
-/* おすすめ */
-.reco { padding: 0 20px; margin-top: 40px; }
-.reco .label { font-size: 12px; color: var(--text-sub); }
-.reco .box { display: block; margin-top: 12px; border: 1px solid var(--text); border-radius: 3px; overflow: hidden; }
-.reco .ph { aspect-ratio: 16 / 9; }
-.reco .body { padding: 18px 18px 20px; }
-.reco h2 { font-size: 20px; font-weight: 700; line-height: 1.5; }
-.reco .why { font-size: 12px; color: var(--text-sub); margin-top: 8px; }
-.reco .spec { font-size: 12px; color: var(--text-sub); margin-top: 14px; }
-.reco .switches { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
-
-/* つよさ */
-.str { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--text-sub); }
-.stars { display: inline-flex; gap: 3px; font-size: 11px; line-height: 1; }
-.stars i { color: var(--text); }
-.stars i.fa-regular { color: #c9c9c9; }
-.reco .str { font-size: 12px; margin-top: 10px; }
-.reco .stars { font-size: 12px; }
-
-/* フォルダ一覧 */
 .folders-head {
   padding: 0 20px;
   margin-top: 52px;
@@ -221,35 +277,22 @@ a { color: inherit; text-decoration: none; }
 }
 .folder { display: block; }
 .folder .ph { aspect-ratio: 4 / 3; }
-.folder .fname { font-size: 13px; font-weight: 500; line-height: 1.65; margin-top: 10px; }
-.folder .str { margin-top: 7px; }
+.folder .fmonth { font-size: 11px; color: var(--text-sub); margin-top: 10px; }
+.folder .fname { font-size: 13px; font-weight: 500; line-height: 1.65; margin-top: 2px; }
 .folder .fspec { font-size: 11px; color: var(--text-sub); margin-top: 5px; line-height: 1.65; }
 .folder .fdone { font-size: 11px; color: var(--text-sub); margin-top: 6px; }
 .folder .fdone i { font-size: 10px; margin-right: 4px; }
 
-.self { padding: 0 20px; margin-top: 48px; }
-.self .box {
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.self .t { font-size: 13px; }
-.self .d { font-size: 11px; color: var(--text-sub); margin-top: 2px; }
-
 /* ================================================
-   プログラムの中身
+   テーマの中身
    ================================================ */
-
 .detail-hero { padding: 0 20px; margin-top: 32px; }
 .detail-hero h2 { font-size: 24px; font-weight: 700; line-height: 1.45; }
 .detail-hero .spec { font-size: 12px; color: var(--text-sub); margin-top: 10px; }
 .detail-hero p.lead { font-size: 13px; line-height: 1.9; margin-top: 16px; }
 .detail-hero .ph { aspect-ratio: 16 / 9; margin-top: 20px; }
 
-/* 中身の要点 */
+/* めやす */
 .facts { padding: 0 20px; margin-top: 44px; }
 .facts ul { margin-top: 6px; }
 .facts li {
@@ -260,12 +303,10 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;
 }
 .facts li:first-child { border-top: 1px solid var(--border); }
-.facts .k { flex: 0 0 84px; color: var(--text-sub); font-size: 12px; }
+.facts .k { flex: 0 0 92px; color: var(--text-sub); font-size: 12px; }
 .facts .v { flex: 1; }
-.facts .v .str { font-size: 13px; color: var(--text); }
-.facts .v .stars { font-size: 13px; }
 
-/* 12週の流れ */
+/* 週の一覧 */
 .weeks { margin-top: 44px; }
 .weeks .sec-head { padding: 0 20px; }
 .weeks ul { margin-top: 14px; }
@@ -277,10 +318,67 @@ a { color: inherit; text-decoration: none; }
   gap: 14px;
 }
 .weeks li:last-child { border-bottom: 1px solid var(--border); }
-.weeks .wk { flex: 0 0 52px; font-size: 11px; color: var(--text-sub); }
+.weeks .wk { flex: 0 0 58px; font-size: 11px; color: var(--text-sub); }
 .weeks .ws { flex: 1; font-size: 14px; }
-.weeks .wc { font-size: 11px; color: var(--text-sub); }
+.weeks .wd { display: block; font-size: 11px; color: var(--text-sub); line-height: 1.6; margin-top: 1px; }
+.weeks .wc { flex: 0 0 auto; font-size: 11px; color: var(--text-sub); }
 .weeks .wi { color: var(--text-sub); }
+
+/* 割り振りの説明 */
+.howto { padding: 0 20px; margin-top: 44px; }
+.howto .box { background: var(--panel); padding: 20px 18px; }
+.howto .t { font-size: 13px; font-weight: 500; }
+.howto ul { margin-top: 14px; }
+.howto li {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  padding: 8px 0;
+  line-height: 1.7;
+}
+.howto li + li { border-top: 1px solid var(--border); }
+.howto .k { flex: 0 0 76px; color: var(--text-sub); }
+.howto .v { flex: 1; }
+.howto .d { font-size: 11px; color: var(--text-sub); margin-top: 14px; line-height: 1.8; }
+
+/* ================================================
+   Switch Lab（下層ページ）
+   ================================================ */
+.lab-hero { padding: 0 20px; margin-top: 32px; }
+.lab-hero h2 { font-size: 24px; font-weight: 700; line-height: 1.45; }
+.lab-hero .spec { font-size: 12px; color: var(--text-sub); margin-top: 10px; }
+.lab-hero p.lead { font-size: 13px; line-height: 1.9; margin-top: 16px; }
+
+.progress { padding: 0 20px; margin-top: 32px; }
+.progress .box { background: var(--panel); padding: 18px; }
+.progress .top { display: flex; align-items: baseline; justify-content: space-between; }
+.progress .t { font-size: 13px; font-weight: 500; }
+.progress .c { font-size: 12px; color: var(--text-sub); }
+.progress .bar { height: 4px; background: #dcdcdc; margin-top: 13px; overflow: hidden; }
+.progress .bar span { display: block; height: 100%; background: var(--text); }
+
+.next-lesson { padding: 0 20px; margin-top: 40px; }
+.next-lesson .label { font-size: 12px; color: var(--text-sub); }
+.next-lesson .ph { aspect-ratio: 16 / 10; margin-top: 12px; }
+.next-lesson h3 { font-size: 20px; font-weight: 700; line-height: 1.5; margin-top: 14px; }
+.next-lesson .m { font-size: 12px; color: var(--text-sub); margin-top: 4px; }
+
+.vols { margin-top: 44px; }
+.vols .sec-head { padding: 0 20px; }
+.vols ul { margin-top: 14px; }
+.vols li {
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.vols li:last-child { border-bottom: 1px solid var(--border); }
+.vols .no { flex: 0 0 44px; font-size: 11px; color: var(--text-sub); }
+.vols .t { flex: 1; font-size: 14px; }
+.vols .s { flex: 0 0 auto; font-size: 11px; color: var(--text-sub); }
+.vols .s i { font-size: 10px; margin-right: 4px; }
+.vols li.is-done .t { color: var(--text-sub); }
 
 .foot-action { padding: 32px 20px 56px; }
 .foot-action .sub { display: block; text-align: center; margin-top: 16px; font-size: 12px; color: var(--text-sub); }
